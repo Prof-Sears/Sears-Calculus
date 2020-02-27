@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%
+%
+% The searshomework package formats my homework assignments.
+%
+%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{searshomework}
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% Import some packages.
+%
+%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% Import packages from the APEX Calculus Book
+%
+%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{APEX_commands}
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% This cleans up some of the space at the top for the title.
+%
+%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{titling}
+\setlength{\droptitle}{-1.25in}
+\pretitle{\begin{center}\LARGE\bfseries\sffamily}
+\posttitle{\end{center}}
+\preauthor{\begin{center}\Large\bfseries\sffamily}
+\postauthor{\end{center}}
+\predate{}
+\postdate{\vspace{-0.25in}}
+%%%%%%%%%%%%%%%%%%%%
+%
+% This sets my font preferences.
+%
+%%%%%%%%%%%%%%%%%%%%
+\ifxetex
+	\RequirePackage{xltxtra}
+	\usepackage{fontspec}
+	\setromanfont{Liberation Serif}
+	\setsansfont{Liberation Sans}
+\else
+	\usepackage{times}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% Formats the headers and footers
+%
+%%%%%%%%%%%%%%%%%%%%
+%\RequirePackage{fancyhdr}
+\pagestyle{empty}
+%\rfoot{Typeset with \ifxetex \XeLaTeX . \else \LaTeX . \fi}
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% This sets my preferred margins.
+%
+%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{geometry}
+\geometry{letterpaper,margin=1in}
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% Tell LateX to print the exercises.
+%
+%%%%%%%%%%%%%%%%%%%%
+\setboolean{printquestions}{true}
