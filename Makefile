@@ -19,7 +19,7 @@ all: $(BOOKS)
 	xelatex $<
 
 clean:
-	rm *~ *.toc *.out *.aux *.log *.idx *.tcp *.answers
+	rm *~ *.out *.aux *.log *.tcp *.answers
 
 rmproper:
 	rm $(BOOKS)
