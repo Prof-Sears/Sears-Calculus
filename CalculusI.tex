@@ -1,15 +1,44 @@
-%%%%
-% May 15, 2018, CreateSpace ISBN created
-% ISBN-13: 978-1719219594 
+%%%
 %
-% ISBN-10: 1719219591 
-%%%%
-\RequirePackage{ifthen}
+% File: CalculusI.tex
+%
+% This is Part 1 of the APEX Calculus Book.
+%
+%%%
+
+%%%
+%
+% I do not understand this part. I will use the book document class throughout.
+%
+%%%
+%\RequirePackage{ifthen}
+%\newboolean{longpage}
+%\setboolean{longpage}{false}
+%\ifthenelse{\boolean{longpage}}%
+%{\documentclass[10pt]{article}}%
+%{\documentclass[10pt]{book}}
+
+%%%
+%
+% This sets the documetclass to book.
+%
+%%%
+\documentclass[10pt]{book} % I really want to use 12pt here. I will experiment with it later.
+
+%%%
+%
+% Import the formatting information.
+%
+%%%
+\usepackage{searsbook}
+
+%%%
+%
+% The longpage boolean seems to be important. I suspect there may be a better option for setting paper sizes.
+%
+%%%
 \newboolean{longpage}
 \setboolean{longpage}{false}
-\ifthenelse{\boolean{longpage}}%
-{\documentclass[10pt]{article}}%
-{\documentclass[10pt]{book}}
 
 \newboolean{printlabelname}
 \setboolean{printlabelname}{false}
@@ -22,7 +51,15 @@
 \usepackage{xr}
 \externaldocument{Calculus}
 
-\input{headers/Page_Size_Calculus}
+
+%%%
+%
+% It looks like the book was specifically tied to the page size. I suspect the authors were up to no good with alignments.
+% I may be a while untangling this part.
+%
+%%%
+%\input{headers/Page_Size_Calculus}
+
 \usepackage{APEX_format}
 \input{headers/Header_Calculus}
 \usepackage{pgfplots}
@@ -30,29 +67,33 @@
 \usepackage{pdfpages}
 
 
-
-\ifthenelse{\boolean{xetex}}%
-	{\sffamily
-	%%\usepackage{fontspec}
-	\usepackage{mathspec}
-	\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont[Mapping=tex-text]{Calibri}
-	\setsansfont[Mapping=tex-text]{Calibri}
-	\setmathsfont(Greek){[cmmi10]}}
-	{}
-	
-	\ifthenelse{\boolean{luatex}}%
-	{\sffamily
-	\usepackage{fontspec}
-	\usepackage{unicode-math}
-	%\usepackage{mathspec}
-	%\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont{Calibri}
-	%\setsansfont[Mapping=tex-text]{Calibri}
-	\setmathfont[range=\mathup]{Calibri}
-	\setmathfont[range=\mathit]{Calibri Italic}
-	}
-	{}
+%%%
+%
+% This is the original font information.
+%
+%%%
+%\ifthenelse{\boolean{xetex}}%
+%	{\sffamily
+%	%%\usepackage{fontspec}
+%	\usepackage{mathspec}
+%	\setallmainfonts[Mapping=tex-text]{Calibri}
+%	\setmainfont[Mapping=tex-text]{Calibri}
+%	\setsansfont[Mapping=tex-text]{Calibri}
+%	\setmathsfont(Greek){[cmmi10]}}
+%	{}
+%	
+%	\ifthenelse{\boolean{luatex}}%
+%	{\sffamily
+%	\usepackage{fontspec}
+%	\usepackage{unicode-math}
+%	%\usepackage{mathspec}
+%	%\setallmainfonts[Mapping=tex-text]{Calibri}
+%	\setmainfont{Calibri}
+%	%\setsansfont[Mapping=tex-text]{Calibri}
+%	\setmathfont[range=\mathup]{Calibri}
+%	\setmathfont[range=\mathit]{Calibri Italic}
+%	}
+%	{}
 
 \makeindex
 
