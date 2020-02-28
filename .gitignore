@@ -2,6 +2,7 @@
 #
 #
 ## Standard LaTeX files types
+*.toc
 *.aux
 *.idx
 *.ilg
@@ -25,10 +26,10 @@
 *.answers
 #
 ## Don't skip these files
-#!CalculusI.aux
-#!CalculusII.aux
-#!CalculusIII.aux
-#!Calculus.aux
+!CalculusI.aux
+!CalculusII.aux
+!CalculusIII.aux
+!Calculus.aux
 ## Seeing if this makes sense to do - these .pdfs are very large
 Calculus.pdf
 CalculusI.pdf

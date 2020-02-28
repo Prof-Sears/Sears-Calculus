@@ -14,6 +14,8 @@ all: $(BOOKS)
 
 %.pdf: %.tex
 	xelatex $<
+	makeindex $(<:.tex=.idx)
+	xelatex $<
 	xelatex $<
 
 clean:
