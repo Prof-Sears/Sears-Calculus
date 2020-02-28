@@ -15,3 +15,9 @@ all: $(BOOKS)
 %.pdf: %.tex
 	xelatex $<
 	xelatex $<
+
+clean:
+	rm *~ *.toc *.out *.aux *.log *.idx *.tcp *.answers
+
+rmproper:
+	rm $(BOOKS)
