@@ -16,8 +16,8 @@
 *.dep
 *.dpth
 *.md5
-#*.out
-#*.log
+*.out
+*.log
 *.tmp
 *.tps
 #
