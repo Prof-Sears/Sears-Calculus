@@ -1,16 +1,31 @@
-% Calc 1 C 10737424946
-% Calc 1 BW 10737424947
-% Calc 2 C 10737424948
-% Calc 2 BW 10737424949
-% Calc C 10737424952
-% Calc BW 10737424951
+%%%
+%
+% File: Calculus.tex
+% 
+% This is the main file for the APEX Calculus Book.
+% I plan to edit this book first, and then move the changes to the other books.
+%
+%%%
 
-\RequirePackage{ifthen}
-\newboolean{longpage}
-\setboolean{longpage}{false}
-\ifthenelse{\boolean{longpage}}%
-{\documentclass[10pt]{article}}%
-{\documentclass[10pt]{book}}
+%%%
+%
+% The following code does not make sense to me. I'm going to use the book document class for my work.
+%
+%%%
+%\RequirePackage{ifthen}
+%\newboolean{longpage}
+%\setboolean{longpage}{false}
+%\ifthenelse{\boolean{longpage}}%
+%{\documentclass[10pt]{article}}%
+%{\documentclass[10pt]{book}}
+\documentclass[10pt]{book}  %NOTE: I would prefer 12 point. I will investigate later.
+
+%%%
+%
+% The book formatting instruction will go in this package.
+%
+%%%
+\usepackage{searsbook}
 
 \newboolean{printlabelname}
 \setboolean{printlabelname}{false}

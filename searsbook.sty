@@ -1,0 +1,37 @@
+%%%
+%
+% This file sets the formatting preferences for all versions of the book.
+% This seems to be done separately in each book by the original authors.
+%
+%%%
+\ProvidesPackage{searsbook}
+
+%%%
+%
+% The original authors made heavy use of this package. I hope to eleminate it in the future.
+%
+%%%
+\RequirePackage{ifthen}
+
+%%%
+%
+% Set up the fonts.
+%
+%%%
+\RequirePackage{ifxetex}
+\ifxetex
+\RequirePackage{xltxtra}
+\RequirePackage{fontspec}
+\setromanfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\else
+\RequirePackage{times}
+\fi
+
+%%%
+%
+% Configure the margins. This may need to change if I print send the book to custom printers.
+%
+%%%
+\RequirePackage{geometry}
+\geometry{paper=letterpaper,margin=1in}
